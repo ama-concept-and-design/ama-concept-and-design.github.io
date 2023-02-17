@@ -1,0 +1,332 @@
+@font-face {
+    font-family: 'Millimetre Light';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(02_fonts/Millimetre-Light_web.woff2) format('woff2');
+
+}
+
+@font-face {
+    font-family: 'Millimetre Extrablack';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(02_fonts/Millimetre-Extrablack_web.woff2) format('woff2');
+
+}
+
+@font-face {
+    font-family: 'Victorianna';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(02_fonts/vtf_victorianna_thin-webfont.woff) format('woff');
+
+}
+
+@font-face {
+    font-family: 'Solide Mirage';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(02_fonts/Solide_Mirage-Etroit_web.woff2) format('woff2');
+
+}
+
+body{
+    background-color: rgb(250, 250, 250);
+    font-family: 'Millimetre Light', sans-serif;
+    line-height: 1,5;
+
+}
+
+header{
+    font-family: 'Victorianna';
+}
+
+.header{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 24px;
+    background-color: rgba(70, 64, 92, 0.505);
+    color: rgb(255, 255, 255);
+    border-bottom: solid;
+    align-items: baseline;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.header-lien{
+    font-family: 'Millimetre Extrablack';
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 24px;
+    align-items: baseline;
+    text-align: right;
+    position: sticky;
+    top: 95px;
+}
+
+
+.header a{
+    text-decoration: none;
+    color: currentColor;
+}
+
+a{
+    color:rgb(138, 119, 112);
+    padding: 10px;
+        /*display:inline-block; 
+        transform:rotate(90deg);
+        opacity:0;
+        transition:0.5s;*/
+    }
+
+    a:hover{ /*quand on a la souris sur un lien*/
+        color: rgb(243, 185, 150);
+        transform:translate(0,2px);
+        opacity:0.5; 
+        transition:1s;  
+    }
+
+/*** About Home***/
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.project{
+    display: grid;
+    text-decoration: none;
+    align-items: start;
+    justify-items: center;
+}
+
+.project:nth-child(2n){
+    transform: translateY(200px);
+}
+
+.project-title,
+.project img{
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+}
+
+.project-title{
+    font-family: 'Solide Mirage';
+    transform: translateY(100px);
+    font-size: 50px;
+    color: rgb(182, 171, 148);
+    text-align: justify, left;
+}
+
+/*** About me ***/
+
+#about .wrapper {
+	max-width: 80%;
+	margin: 10%;
+	margin-right: 50%;
+}
+@media (min-width: 760px) {
+	#about .wrapper {
+		margin-right: 24%;
+	}
+}
+
+.about__intro {
+	border-left: 5px solid;
+	padding-left: 20px;
+	margin-bottom: 1px;
+	max-width: 30em;
+    font-size: 20px;
+}
+
+/*** Affiche ***/
+
+.portfolio{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.portfolio-title{
+    font-family: 'Solide Mirage';
+    font-size: 50px;
+    color: rgb(182, 171, 148);
+    text-align: justify, left;
+    grid-column: 1/4;
+}
+
+/* #about_portfolio .wrapper_portfolio {
+	max-width: 80%;
+	margin: 10%;
+	margin-right: 50%;
+
+    N'EST PAS BIEN RATTACHé A LA FONCTION
+} */
+@media (min-width: 760px) {
+	#about_portfolio .wrapper_portfolio {
+		margin-right: 24%;
+	}
+}
+
+.about__description {
+	border-left: 5px solid;
+	padding-left: 20px;
+	margin-bottom: 1px;
+	max-width: 50em;
+    font-size: 20px;
+    text-align: justify;
+}
+
+
+/* .two_columns_66_33 {
+    width: 100%
+}
+
+.two_columns_66_33>.column1 {
+    width: 66.66%;
+    float: left;
+}
+
+.two_columns_66_33>.column1>.column_inner {
+    padding: 0 20px 0 0
+}
+
+.two_columns_66_33>.column2 {
+    width: 33.33%;
+    float: right;
+}
+
+.two_columns_66_33>.column2>.column_inner {
+    padding: 0 0 0 20px;
+}
+
+.lightbox_single_portfolio,.portfolio_single{
+    position: relative
+}
+
+.portfolio_single.portfolio-wide-left {
+    padding: 0 0 0 4.5%
+}
+
+.portfolio_single.portfolio-wide-right {
+    padding: 0 4.5% 0 0
+}
+
+.portfolio_single a.lightbox_single_portfolio>i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 40px;
+    color: #fff;
+    margin: -20px 0 0 -15px;
+    z-index: 110
+} */
+
+
+/* .grid-affiches{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    font-family: 'Solide Mirage';
+    transform: translateY(100px);
+    font-size: 30px;
+    color: rgb(182, 171, 148);
+    text-align: justify, left;
+}
+
+.project-title-solo,
+.grid-affiches img{
+    grid-column: 3/-4;
+    grid-row: 3/-4;
+} */
+
+
+
+
+
+/*** Test raté ***/
+
+
+/* .img-block {
+	grid-row-start: 4;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: auto;
+	gap: 20px
+} */
+
+
+/* .item-titre{
+        position: absolute;
+        text-align: center;
+        text-transform: uppercase
+} */
+
+/* .overlapping-grid {
+    display: grid;
+    align-items: center;
+    grid-template-areas: 
+      "image-section-one"
+      "title"
+      "image-section-two"
+      "text";
+  }
+  
+  @media (min-width: 40em) {
+    .overlapping-grid {
+      grid-template-areas:
+        "image-section-one image-section-one image-section-one"
+        "title text text"
+        "image-section-two image-section-two image-section-two";
+    }
+  }
+  
+  .overlapping-grid h1 {
+    grid-area: title;
+  
+    font-size: 4rem;
+    color: white;
+    padding: 1rem;
+    text-shadow: 0 0 1rem rgb(0 0 0 / 0.2);
+    z-index: 1;
+  }
+  
+  .overlapping-grid p {
+    grid-area: text;
+  
+    background: black;
+    padding: 1em;
+    color: white;
+  }
+  
+  .overlapping-grid img {
+    
+    grid-row: image-section-one / image-section-two;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 900px);
+    gap: 30px;
+    justify-content: center;
+    object-fit: cover;
+  }
+
+
+
+
+.projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 600px);
+    gap: 24px;
+    justify-content: center;
+    
+}
+
+/* .project-long{
+    grid-column: span 2;
+    grid-row: span 2;
+} */
